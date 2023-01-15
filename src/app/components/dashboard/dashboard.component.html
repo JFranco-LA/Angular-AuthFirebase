@@ -1,0 +1,8 @@
+<section class="wrapper">
+    <div *ngIf="!isLoading">
+        <h4>{{dataUser.email}}</h4>
+        <button (click)="cerrarSesion()">cerrar sesion</button>
+    </div>
+    <app-spinner *ngIf="isLoading"></app-spinner>
+    
+</section>

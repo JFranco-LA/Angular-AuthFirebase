@@ -1,0 +1,34 @@
+<section class="wrapper">
+    <article *ngIf="!isLoading" class="body-login">
+        <figure class="icon-login__container">
+            <img src="../../../assets/images/register.png" alt="login" class="icon-login">
+        </figure>
+        <h3>register user</h3>
+        <form class="formulario-login" [formGroup]="registrarUsuario" (ngSubmit)="registerData()">
+            <div class="inputBox">
+                <input type="text" required formControlName="email">
+                <span>Email:</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required formControlName="password">
+                <span>Password:</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="password" required formControlName="repeatPassword">
+                <span>Repeat Password:</span>
+            </div>
+
+
+            <div>
+                <button [disabled]="registrarUsuario.invalid" class="btn" type="submit">Registrar Usuario</button>
+            </div>
+
+            <div class="other-options">
+                <p class="my-account">Ya tengo una cuenta <a routerLink="/login">Iniciar Sesión</a></p>
+            </div>
+
+        </form>
+    </article>
+    <app-spinner *ngIf="isLoading"></app-spinner>
+</section>

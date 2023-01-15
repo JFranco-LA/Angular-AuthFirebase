@@ -1,0 +1,31 @@
+<section class="wrapper">
+    <article *ngIf="!isLoading" class="body-login">
+
+        <figure class="icon-login__container">
+            <img src="../../../assets/images/login.png" alt="login" class="icon-login">
+        </figure>
+
+        <h3>login user</h3>
+
+        <form class="formulario-login" [formGroup]="sesionUsuario" (ngSubmit)="loginAccount()">
+            <div class="inputBox">
+                <input type="text" required formControlName="email">
+                <span>Email:</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="password" required formControlName="password">
+                <span>Password:</span>
+            </div>
+            <div>
+                <button class="btn" type="submit">Iniciar Sesion</button>
+            </div>
+
+            <div class="other-options">
+                <p class="not-account">No tienes cuenta? <a routerLink="/register">Registrarse</a></p>
+                <a routerLink="/recover-pass">¿Olvidó su contraseña?</a>
+            </div>
+        </form>
+    </article>
+    <app-spinner *ngIf="isLoading"></app-spinner>
+</section>

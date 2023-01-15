@@ -1,0 +1,142 @@
+.wrapper {
+    height: 100%;
+    background-color: #1d2b3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article h3 {
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem 0;
+    letter-spacing: .45rem;
+    font-size: .95rem;
+}
+
+article{
+    background-color: #182431;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    border: 1px solid #00dfc557;
+    border-radius: .5rem;
+}
+
+
+.icon-login__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem;
+
+    margin: 0;
+    height: 6rem;
+    background-color: #e2ffff;
+    border-radius: 50%;
+
+    width: fit-content;
+    margin: auto;
+}
+
+.icon-login {
+    height: 100%;
+}
+
+.formulario-login{
+    display: flex;
+    flex-direction: column;
+    gap: .95rem; 
+    padding: 1rem .75rem;
+}
+
+.inputBox{
+    position: relative;
+    width: 15.625rem;
+}
+
+.inputBox input {
+    width: 90%;
+    padding: .75rem;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background-color: #1d2b3a;
+    border-radius: .25rem;
+    outline: none;
+    color: #fff;
+    font-size: .85rem;
+    transition: .5s;
+}
+
+.inputBox span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .25);
+    font-size: .85rem;
+    transition: .5s;
+}
+
+.inputBox input:valid ~span,
+.inputBox input:focus ~span{
+    color: #1d2b3a;
+    transform: translateX(10px) translateY(-8px);
+    font-size: .65rem;
+    padding: 0  10px;
+    background-color: #00dfc4;
+    border-radius: .25rem;
+}
+
+
+.inputBox input:valid,
+.inputBox input:focus{
+    border: 1px solid #00dfc4;
+}
+
+.inputBox input:hover{
+    border: 1px solid #009281;
+}
+
+.btn{
+    background-color: #00dfc4;
+    padding: .75rem;
+    color: #1d2b3a;
+    width: 100%;
+    border-radius: .25rem;
+    border: 1px solid rgba(255, 255, 255, .25);
+    transition: .5s;
+}
+
+
+.btn:hover{
+    border-color: #00dfc4;
+    background-color: transparent;
+    color: #00dfc4;
+    font-size: 1.05remn;
+}
+
+.other-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: .5rem;
+    gap: 1rem;
+}
+
+.not-account{
+    color: rgba(255, 255, 255, .25);
+    font-size: .95rem;
+    display: flex;
+    gap: .75rem;
+    margin: 0;
+}
+
+.other-options a {
+    color: #00dfc4;
+    font-size: .9rem;
+}
